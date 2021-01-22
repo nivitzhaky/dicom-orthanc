@@ -9,3 +9,17 @@ services:
       - ./conf/orthanc.json:/etc/orthanc/orthanc.json:ro
       - ./WorklistsDatabase:/usr/share/WorklistsDatabase
     privileged: true
+  ftp:
+    image: stilliard/pure-ftpd:hardened
+    environment:
+      FTP_USER_NAME: niv
+      FTP_USER_PASS: niv
+      FTP_USER_HOME: /home/niv
+    ports:
+      - "21:21"
+      - "30000-30009:30000-30009"
+    volumes:
+      - ./conf/orthanc.json:/etc/orthanc/orthanc.json:ro
+      - ./WorklistsDatabase:/usr/share/WorklistsDatabase
+      - ./ftp:/home/niv
+    privileged: true
