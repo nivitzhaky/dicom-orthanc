@@ -243,7 +243,16 @@
      * and the third one is the TCP port number corresponding
      * to the DICOM protocol on the remote modality (usually 104).
      **/
-    // "sample" : [ "STORESCP", "127.0.0.1", 2000 ]
+     "sample" : [ "STORESCP", "127.0.0.1", 2000 ],
+   "sample1" : [ "FINDSCU", "172.21.0.1", 2000 ],
+   "sample2" : [ "FINDSCU", "172.22.0.1", 2000 ],
+   "sample3" : [ "FINDSCU", "172.23.0.1", 2000 ],
+   "sample4" : [ "FINDSCU", "172.24.0.1", 2000 ],
+   "sample5" : [ "FINDSCU", "172.25.0.1", 2000 ],
+   "sample6" : [ "FINDSCU", "172.26.0.1", 2000 ],
+   "sample7" : [ "FINDSCU", "172.27.0.1", 2000 ],
+   "sample8" : [ "FINDSCU", "172.28.0.1", 2000 ],
+   "sample9" : [ "FINDSCU", "172.29.0.1", 2000 ]
 
     /**
      * A fourth parameter is available to enable patches for

@@ -8,6 +8,8 @@ services:
     volumes:
       - ./conf/orthanc.json:/etc/orthanc/orthanc.json:ro
       - ./WorklistsDatabase:/usr/share/WorklistsDatabase
+      - ./db:/var/lib/orthanc/db/
+    entrypoint: /usr/local/sbin/Orthanc /etc/orthanc/orthanc.json --verbose
     privileged: true
   ftp:
     image: stilliard/pure-ftpd:hardened
